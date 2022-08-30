@@ -5,7 +5,7 @@
 
 - name: 2.1.1.3 verify a remote chrony server is configured
   command: >
-    egrep -c '^(server|pool)' /etc/chrony.d/ntp-pool.conf
+    egrep -c '^(server|pool)' /etc/chrony.d/ntp-pool.sources
   register: line_matched
   when: cis_enable_chrony and not cis_enable_ntp
   tags:
